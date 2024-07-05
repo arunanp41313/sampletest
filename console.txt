@@ -1,4 +1,9 @@
 [RemoteTestNG] detected TestNG version 6.14.3
+done---------------1
+Formatted Date and Time: 05 Jul 24_102054
+Directory created: C:\Users\Public\RestAssured\05 Jul 24_102054
+done---------------2
+C:\Users\Public\RestAssured
 
 ===============================================
 Suite
