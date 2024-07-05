@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-05T11:46:23Z" name="Suite" finished-at="2024-07-05T11:46:27Z" duration-ms="3854">
+    <groups>
+    </groups>
+    <test started-at="2024-07-05T11:46:23Z" name="Test" finished-at="2024-07-05T11:46:27Z" duration-ms="3854">
+      <class name="anuntaRestAssured.ApiTest">
+        <test-method signature="apiMethod()[pri:0, instance:anuntaRestAssured.ApiTest@78b729e6]" started-at="2024-07-05T11:46:23Z" name="apiMethod" finished-at="2024-07-05T11:46:27Z" duration-ms="3829" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- apiMethod -->
+      </class> <!-- anuntaRestAssured.ApiTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

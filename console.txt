@@ -1,0 +1,7 @@
+[RemoteTestNG] detected TestNG version 6.14.3
+
+===============================================
+Suite
+Total tests run: 1, Failures: 0, Skips: 0
+===============================================
+
