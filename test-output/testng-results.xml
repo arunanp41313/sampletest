@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="71" started-at="2024-07-05T14:20:54Z" finished-at="2024-07-05T14:20:54Z">
+  <suite name="Default suite" duration-ms="40" started-at="2024-07-08T10:42:55Z" finished-at="2024-07-08T10:42:55Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="71" started-at="2024-07-05T14:20:54Z" finished-at="2024-07-05T14:20:54Z">
+    <test name="Default test" duration-ms="40" started-at="2024-07-08T10:42:55Z" finished-at="2024-07-08T10:42:55Z">
       <class name="anuntaRestAssured.ApiTest">
-        <test-method status="PASS" signature="getMethod2()[pri:0, instance:anuntaRestAssured.ApiTest@3c0f93f1]" name="getMethod2" duration-ms="38" started-at="2024-07-05T14:20:54Z" finished-at="2024-07-05T14:20:54Z">
+        <test-method status="PASS" signature="apiMethod45()[pri:0, instance:anuntaRestAssured.ApiTest@3c0f93f1]" name="apiMethod45" duration-ms="13" started-at="2024-07-08T10:42:55Z" finished-at="2024-07-08T10:42:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getMethod2 -->
+        </test-method> <!-- apiMethod45 -->
       </class> <!-- anuntaRestAssured.ApiTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

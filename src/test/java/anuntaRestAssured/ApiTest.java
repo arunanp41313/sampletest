@@ -26,7 +26,7 @@ public class ApiTest {
 		System.out.println("done----------------2");	
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	private void getMethod2() throws IOException 
 	{
 		System.out.println("done---------------1");
@@ -55,5 +55,41 @@ public class ApiTest {
         }
      	System.out.println("done---------------2");
 	}
-
+	
+	
+	@Test(enabled=true)
+	private void apiMethod45() throws IOException 
+	{
+		System.out.println("done---------------1");
+		
+		// Get the Jenkins workspace directory
+        String jenkinsWorkspace = System.getenv("WORKSPACE");
+ 
+        if (jenkinsWorkspace != null && !jenkinsWorkspace.isEmpty()) 
+        {
+            // Define the name of the new directory you want to create
+            String newDirectoryName = "new_folder";
+ 
+            // Path for the new directory within Jenkins workspace
+            String newDirectoryPath = jenkinsWorkspace + File.separator + newDirectoryName;
+ 
+            // Create the directory
+            File directory = new File(newDirectoryPath);
+            boolean created = directory.mkdir();
+ 
+            if (created) 
+            {
+                System.out.println("Directory '" + newDirectoryName + "' created successfully at: " + newDirectoryPath);
+            } else 
+            {
+                System.err.println("Failed to create directory '" + newDirectoryName + "' at: " + newDirectoryPath);
+            }
+        } else 
+        {
+            System.err.println("Jenkins workspace not found. Cannot create directory.");
+        }
+        System.out.println("done----------------2");
+    };
+			
 }
+
