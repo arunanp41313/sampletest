@@ -67,8 +67,8 @@ public class ApiTest {
 		WebDriver driver= new ChromeDriver();
 		driver.get("https://www.facebook.com/login.php/");
 		
-		//Create folder
-		System.out.println("done---------------1");
+		//Create folder 
+		System.out.println("done---------------Create folder as current date & time");
 		Date currentDate = new Date();
         // Define the format pattern and locale
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yy_HHmmss", Locale.ENGLISH);
@@ -77,10 +77,10 @@ public class ApiTest {
         // Print the formatted date and time
         System.out.println("Formatted Date and Time: " + formattedDate);;
 		
+        System.out.println("done---------------Create folder in jenkins workspace");
 		// Get the Jenkins workspace directory
         String jenkinsWorkspace = System.getenv("WORKSPACE");
         System.out.println(jenkinsWorkspace);
-        
         String directoryPath = jenkinsWorkspace + "//" + formattedDate;
         // Create a File object representing the directory
         File directory = new File(directoryPath);
@@ -95,10 +95,8 @@ public class ApiTest {
         } else {
             System.out.println("Directory already exists: " + directory.getAbsolutePath());
         }
-     	System.out.println("done---------------2");
      	
-     	
-     	//take ss
+     	System.out.println("done---------------take SS and store it into the jenkins worksapce folder");
      	//METHOD-- 1 ( It requires common.io dependency for using fileutils
      			TakesScreenshot screenshot= (TakesScreenshot) driver;
      			File sourcefile= screenshot.getScreenshotAs(OutputType.FILE);
