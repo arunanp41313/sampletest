@@ -77,11 +77,12 @@ public class ApiTest {
         // Print the formatted date and time
         System.out.println("Formatted Date and Time: " + formattedDate);;
 		
-        System.out.println("done---------------Create folder in jenkins workspace");
+        System.out.println("done---------------Create folder in jenkins workspace using current date & time");
 		// Get the Jenkins workspace directory
         String jenkinsWorkspace = System.getenv("WORKSPACE");
         System.out.println(jenkinsWorkspace);
         String directoryPath = jenkinsWorkspace + "//" + formattedDate;
+        System.out.println(directoryPath);
         // Create a File object representing the directory
         File directory = new File(directoryPath);
  
@@ -101,6 +102,7 @@ public class ApiTest {
      			TakesScreenshot screenshot= (TakesScreenshot) driver;
      			File sourcefile= screenshot.getScreenshotAs(OutputType.FILE);
      			String directoryPathSS = jenkinsWorkspace + "//" + formattedDate + "//screenshot1.jpg";
+     			System.out.println(directoryPathSS);
      			File destinationfile= new File(directoryPathSS);
      			FileUtils.copyFile(sourcefile, destinationfile);
     };
