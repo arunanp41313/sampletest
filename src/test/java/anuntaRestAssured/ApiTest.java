@@ -61,34 +61,33 @@ public class ApiTest {
 	private void apiMethod45() throws IOException 
 	{
 		System.out.println("done---------------1");
+		Date currentDate = new Date();
+        // Define the format pattern and locale
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yy_HHmmss", Locale.ENGLISH);
+        // Format the date according to the defined pattern
+        String formattedDate = dateFormat.format(currentDate);
+        // Print the formatted date and time
+        System.out.println("Formatted Date and Time: " + formattedDate);;
 		
 		// Get the Jenkins workspace directory
         String jenkinsWorkspace = System.getenv("WORKSPACE");
+        System.out.println(jenkinsWorkspace);
+        
+        String directoryPath = jenkinsWorkspace + "//" + formattedDate;
+        // Create a File object representing the directory
+        File directory = new File(directoryPath);
  
-        if (jenkinsWorkspace != null && !jenkinsWorkspace.isEmpty()) 
-        {
-            // Define the name of the new directory you want to create
-            String newDirectoryName = "new_folder";
- 
-            // Path for the new directory within Jenkins workspace
-            String newDirectoryPath = jenkinsWorkspace + File.separator + newDirectoryName;
- 
-            // Create the directory
-            File directory = new File(newDirectoryPath);
-            boolean created = directory.mkdir();
- 
-            if (created) 
-            {
-                System.out.println("Directory '" + newDirectoryName + "' created successfully at: " + newDirectoryPath);
-            } else 
-            {
-                System.err.println("Failed to create directory '" + newDirectoryName + "' at: " + newDirectoryPath);
+        if (!directory.exists()) {
+            boolean created = directory.mkdirs(); // Create directories recursively
+            if (created) {
+                System.out.println("Directory created: " + directory.getAbsolutePath());
+            } else {
+                throw new IOException("Failed to create directory: " + directory.getAbsolutePath());
             }
-        } else 
-        {
-            System.err.println("Jenkins workspace not found. Cannot create directory.");
+        } else {
+            System.out.println("Directory already exists: " + directory.getAbsolutePath());
         }
-        System.out.println("done----------------2");
+     	System.out.println("done---------------2");
     };
 			
 }
